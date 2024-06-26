@@ -135,7 +135,8 @@ public class LoginPage {
         actions.sendText(passwordField, password);
     }
 
-    public void clickLogin() {
+    public void clickLogin() throws InterruptedException {
+        Thread.sleep(5000);
         actions.clickOnWebElement(loginButton);
     }
 

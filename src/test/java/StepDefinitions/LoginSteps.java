@@ -31,7 +31,7 @@ public class LoginSteps extends BaseClass {
     }
 
     @And("clicks on login button")
-    public void clicksOnLoginButton() {
+    public void clicksOnLoginButton() throws InterruptedException {
         loginPage.clickLogin();
     }
 
