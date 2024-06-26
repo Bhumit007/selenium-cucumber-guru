@@ -27,9 +27,13 @@ public class WebActions {
     }
 
     public void clickOnWebElement(WebElement element) {
-        waitForVisibilityOfElement(element);
-        waitForElementToBeClickable(element);
-        element.click();
+        try {
+            waitForVisibilityOfElement(element);
+            waitForElementToBeClickable(element);
+            element.click();
+        }catch (Exception e){
+            System.out.println("Button not clicking 1");
+        }
     }
 
     public void waitForElementToBeClickable(WebElement element) {

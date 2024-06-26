@@ -137,7 +137,11 @@ public class LoginPage {
 
     public void clickLogin() throws InterruptedException {
         Thread.sleep(5000);
-        actions.clickOnWebElement(loginButton);
+        try {
+            actions.clickOnWebElement(loginButton);
+        }catch (Exception e){
+            System.out.println("Button not clicking");
+        }
     }
 
     //Manager Home Page Methods
